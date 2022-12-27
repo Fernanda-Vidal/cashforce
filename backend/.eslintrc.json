@@ -3,6 +3,7 @@
       "es2020": true
     },
     "extends": "trybe-backend",
+    "ignorePatterns":["backend/src/migrations/20221227141341-create-cnpjs.js"],
     "rules": {
       "sonarjs/no-duplicate-string": ["error", 5]
     }
