@@ -45,6 +45,17 @@ const CNPJController = {
             next(error);
         }
       },
+
+    delete: async (req, res, next) => {
+        try {
+            const { id } = req.params;
+            const CNPJ = await CNPJService.delete(Number(id));
+            return res.status(status.OK).json(CNPJ);
+        } catch (error) {
+            console.log('erro', error);
+            next(error);
+        }
+    },
 };
 
 module.exports = CNPJController;

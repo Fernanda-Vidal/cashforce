@@ -32,6 +32,8 @@ const CNPJService = {
         
             return doUpdate;
       },
+
+      delete: async (id) => CNPJ.destroy({ where: { id } }),
 };
 
 module.exports = CNPJService;
