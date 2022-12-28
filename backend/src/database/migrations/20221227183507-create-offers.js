@@ -19,7 +19,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      ad_valorem: {
+      adValorem: {
         allowNull: false,
         type: Sequelize.STRING,
       },
@@ -31,27 +31,27 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      expires_in: {
+      expiresIn: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      payment_status_sponsor: {
+      paymentStatusSponsor: {
         defaultValue: 0,
         type: Sequelize.TINYINT(1),
       },
-      payment_status_provider: {
+      paymentStatusProvider: {
         defaultValue: 0,
         type: Sequelize.TINYINT(1),
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updated_at: {
+      updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      order_id: {
+      orderId: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -61,7 +61,7 @@ module.exports = {
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       },
-      sponsor_id: {
+      sponsorId: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {

@@ -20,7 +20,7 @@ module.exports = {
         unique: true,
         type: Sequelize.STRING,
       },
-      phone_number: {
+      phoneNumber: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
@@ -32,23 +32,23 @@ module.exports = {
         defaultValue: null, 
         type: Sequelize.STRING,
       },
-      verification_code: {
+      verificationCode: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      email_checked: {
+      emailChecked: {
         defaultValue: 0,
         type: Sequelize.TINYINT(1),
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updated_at: {
+      updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      cash_force_adm: {
+      cashForceAdm: {
         defaultValue: 0,
         type: Sequelize.TINYINT(1),
       },

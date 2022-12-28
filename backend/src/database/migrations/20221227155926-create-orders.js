@@ -11,39 +11,39 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER(11),
       },
-      orderNF_id: {
+      orderNFId: {
         allowNull: false,
         unique: true,
         type: Sequelize.STRING,
       },
-      order_number: {
+      orderNumber: {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      order_path: {
+      orderPath: {
         defaultValue: null,
         unique: true,
         type: Sequelize.STRING,
       },
-      order_file_name: {
+      orderFileName: {
         defaultValue: null,
         unique: true,
         type: Sequelize.STRING,
       },
-      order_original_name: {
+      orderOriginalName: {
         defaultValue: null,
         unique: true,
         type: Sequelize.STRING,
       },
-      emission_date: {
+      emissionDate: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      pdf_file: {
+      pdfFile: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      emited_to: {
+      emitedTo: {
         allowNull: false,
         type: Sequelize.STRING,
       },
@@ -59,15 +59,15 @@ module.exports = {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updated_at: {
+      updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      cnpj_id: {
+      cnpjId: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -77,7 +77,7 @@ module.exports = {
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       },
-      user_id: {
+      userId: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -87,7 +87,7 @@ module.exports = {
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       },
-      buyer_id: {
+      buyerId: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -97,7 +97,7 @@ module.exports = {
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       },
-      provider_id: {
+      providerId: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -107,23 +107,23 @@ module.exports = {
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       },
-      order_status_buyer: {
+      orderStatusBuyer: {
         defaultValue: 0,
         type: Sequelize.STRING,
       },
-      order_status_provider: {
+      orderStatusProvider: {
         defaultValue: 0,
         type: Sequelize.STRING,
       },
-      delivery_receipt: {
+      deliveryReceipt: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      cargo_packing_list: {
+      cargoPackingList: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      delivery_ctrc: {
+      deliveryCtrc: {
         defaultValue: null,
         type: Sequelize.STRING,
       },

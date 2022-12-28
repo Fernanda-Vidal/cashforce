@@ -17,27 +17,27 @@ module.exports = {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      cash_force_tax: {
+      cashForceTax: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      responsible_name: {
+      responsibleName: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      responsible_email: {
+      responsibleEmail: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      responsible_position: {
+      responsiblePosition: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      responsible_phone: {
+      responsiblePhone: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      responsible_mobile: {
+      responsibleMobile: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
@@ -45,7 +45,7 @@ module.exports = {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      postal_code: {
+      postalCode: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
@@ -77,7 +77,7 @@ module.exports = {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      bank_agency: {
+      bankAgency: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
@@ -89,7 +89,7 @@ module.exports = {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      phone_number: {
+      phoneNumber: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
@@ -97,19 +97,19 @@ module.exports = {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      situation_date: {
+      situationDate: {
         defaultValue: null,
         type: Sequelize.STRING,
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updated_at: {
+      updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      cnpj_id: {
+      cnpjId: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
