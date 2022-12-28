@@ -13,45 +13,45 @@ module.exports = {
       },
       tax: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       tariff: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      adValorem: {
+      ad_valorem: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       float: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       iof: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      expiresIn: {
+      expires_in: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      paymentStatusSponsor: {
+      payment_status_sponsor: {
         defaultValue: 0,
         type: Sequelize.TINYINT(1),
       },
-      paymentStatusProvider: {
+      payment_status_provider: {
         defaultValue: 0,
         type: Sequelize.TINYINT(1),
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      orderId: {
+      order_id: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -61,7 +61,7 @@ module.exports = {
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       },
-      sponsorId: {
+      sponsor_id: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {

@@ -13,89 +13,89 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      tradingName: {
+      trading_name: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      cashForceTax: {
+      cash_force_tax: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      responsibleName: {
+      responsible_name: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      responsibleEmail: {
+      responsible_email: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      responsiblePosition: {
+      responsible_position: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      responsiblePhone: {
+      responsible_phone: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      responsibleMobile: {
+      responsible_mobile: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       website: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      postalCode: {
+      postal_code: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       address: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       number: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       complement: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       neighborhood: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       city: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       state: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      phoneNumber: {
+      phone_number: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       situation: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      situationDate: {
+      situation_date: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      cnpjId: {
+      cnpj_id: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -111,7 +111,7 @@ module.exports = {
       },
       email: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
     });
     return buyersTable;

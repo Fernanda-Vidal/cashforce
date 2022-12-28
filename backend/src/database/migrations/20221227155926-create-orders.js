@@ -11,63 +11,63 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER(11),
       },
-      orderNFId: {
+      orderNF_id: {
         allowNull: false,
         unique: true,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      orderNumber: {
+      order_number: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      orderPath: {
+      order_path: {
         defaultValue: null,
         unique: true,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      orderFileName: {
+      order_file_name: {
         defaultValue: null,
         unique: true,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      orderOriginalName: {
+      order_original_name: {
         defaultValue: null,
         unique: true,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      emissionDate: {
+      emission_date: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      pdfFile: {
+      pdf_file: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      emitedTo: {
+      emited_to: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       nNF: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       CTE: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       value: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      cnpjId: {
+      cnpj_id: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -77,7 +77,7 @@ module.exports = {
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       },
-      userId: {
+      user_id: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -87,7 +87,7 @@ module.exports = {
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       },
-      buyerId: {
+      buyer_id: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -97,7 +97,7 @@ module.exports = {
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       },
-      providerId: {
+      provider_id: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
@@ -107,25 +107,25 @@ module.exports = {
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       },
-      orderStatusBuyer: {
+      order_status_buyer: {
         defaultValue: 0,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      orderStatusProvider: {
+      order_status_provider: {
         defaultValue: 0,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      deliveryReceipt: {
+      delivery_receipt: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      cargoPackingList: {
+      cargo_packing_list: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      deliveryCtrc: {
+      delivery_ctrc: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
     });
     return ordersTable;

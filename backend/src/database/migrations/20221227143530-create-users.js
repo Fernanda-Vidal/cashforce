@@ -13,42 +13,42 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       email: {
         allowNull: false,
         unique: true,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      phoneNumber: {
+      phone_number: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       mobile: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
       departament: {
         defaultValue: null, 
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      verificationCode: {
+      verification_code: {
         defaultValue: null,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      emailChecked: {
+      email_checked: {
         defaultValue: 0,
         type: Sequelize.TINYINT(1),
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      cashForceAdm: {
+      cash_force_adm: {
         defaultValue: 0,
         type: Sequelize.TINYINT(1),
       },

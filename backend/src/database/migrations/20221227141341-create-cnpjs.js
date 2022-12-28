@@ -12,16 +12,22 @@ module.exports = {
         type: Sequelize.INTEGER(11),
       },
       cnpj: {
-          allowNull: false,
-          unique: true,
-          type: Sequelize.VARCHAR,
-        },
-      companyType: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        unique: true,
+        type: Sequelize.STRING,
+        },
+      company_type: {
+        allowNull: false,
+        type: Sequelize.STRING,
       },
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      created_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updated_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
     });
     return cnpjsTable;
   },

@@ -11,31 +11,31 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER(11),
       },
-      nDup: {
+      n_dup: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      dVenc: {
+      d_venc: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      vDup: {
+      v_dup: {
         allowNull: false,
-        type: Sequelize.VARCHAR,
+        type: Sequelize.STRING,
       },
-      availableToMarket: {
+      available_to_market: {
         defaultValue: 1,
         type: Sequelize.TINYINT(1),
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      orderId: {
+      order_id: {
         defaultValue: null,
         type: Sequelize.INTEGER(11),
         references: {
