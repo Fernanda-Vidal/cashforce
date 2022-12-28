@@ -20,11 +20,10 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       {
-        createdAt: true,
-        updatedAt: true,
+        // createdAt: true,
+        // updatedAt: true,
         timestamps: true,
         tableName: 'cnpjs',
-        underscored: true,
       },
     );
 

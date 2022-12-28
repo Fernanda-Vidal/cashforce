@@ -57,7 +57,6 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: true,
         timestamps: true,
         tableName: 'offers',
-        underscored: true,
       },
     );
   
@@ -65,7 +64,7 @@ module.exports = (sequelize, DataTypes) => {
       OfferModel.belongsTo(models.Order,
         { foreignKey: 'orderId' });
 
-      OfferModel.belongsTo(models.sponsor,
+      OfferModel.belongsTo(models.Sponsor,
         { foreignKey: 'sponsorId' });
     };
   

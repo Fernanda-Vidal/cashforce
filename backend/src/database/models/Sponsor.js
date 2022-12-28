@@ -112,7 +112,6 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: true,
         timestamps: true,
         tableName: 'sponsors',
-        underscored: true,
       },
     );
 
