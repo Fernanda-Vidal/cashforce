@@ -27,10 +27,10 @@ const CNPJService = {
         
         if (!CNPJExists) throw HttpException('Id não encontrado', status.NOT_FOUND);
         
-        const doUpdate = await CNPJ.update({ cnpj, companyType },
+        const change = await CNPJ.update({ cnpj, companyType },
             { where: { id } });
         
-            return doUpdate;
+        return change;
       },
 
       delete: async (id) => CNPJ.destroy({ where: { id } }),
