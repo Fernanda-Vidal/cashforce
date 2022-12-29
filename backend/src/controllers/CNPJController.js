@@ -4,8 +4,7 @@ const status = require('../utils/StatusCode');
 const CNPJController = {
     create: async (req, res, next) => {
         try {
-            const { cnpj, companyType } = req.body;
-            await CNPJService.create({ cnpj, companyType });
+            await CNPJService.create(req.body);
             return res.status(status.CREATED).json({ message: 'CNPJ cadastrado com sucesso' });
         } catch (error) {
             console.log('erro', error);
@@ -36,9 +35,8 @@ const CNPJController = {
 
     update: async (req, res, next) => {
         try {
-            const { cnpj, companyType } = req.body;
             const { id } = req.params;
-            const CNPJ = await CNPJService.update(Number(id), cnpj, companyType);    
+            const CNPJ = await CNPJService.update(Number(id), req.body);    
             return res.status(status.OK).json(CNPJ);
         } catch (error) {
             console.log('erro', error);

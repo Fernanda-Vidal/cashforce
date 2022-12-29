@@ -8,9 +8,9 @@ const UserService = {
         const {
             email } = infoUser;
         
-        const UserExists = await User.findOne({ where: { email } });
+        const user = await User.findOne({ where: { email } });
 
-        if (UserExists) {
+        if (user) {
             throw HttpException('E-mail já existe no banco de dados', status.UNAUTHORIZED)
         }
 
@@ -18,19 +18,19 @@ const UserService = {
     },
 
     getById: async (id) => {
-        const UserExists = await User.findByPk(id);
+        const user = await User.findByPk(id);
 
-        if (UserExists === null) throw HttpException('Id não encontrado', status.NOT_FOUND);
-        return UserExists;
+        if (user === null) throw HttpException('Id não encontrado', status.NOT_FOUND);
+        return user;
 
     },
 
     getAll: async () => User.findAll({}),
 
     update: async (id, infoUser) => {
-        const UserExists = await User.findByPk(id);
+        const user = await User.findByPk(id);
 
-        if (!UserExists) throw HttpException('Id não encontrado', status.NOT_FOUND);
+        if (!user) throw HttpException('Id não encontrado', status.NOT_FOUND);
 
         const change = await User.update(infoUser,
             { where: { id } });

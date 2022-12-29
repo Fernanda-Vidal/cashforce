@@ -3,14 +3,15 @@ const HttpException = require('../utils/HttpException');
 const status = require('../utils/StatusCode');
 
 const CNPJService = {
-    create: async ({ cnpj, companyType }) => {
+    create: async (infoCNPJ) => {
+        const { cnpj } = infoCNPJ;
         const CNPJExists = await CNPJ.findOne({ where: { cnpj } });
         
         if (CNPJExists) {
             throw HttpException('CNPJ já existe no banco de dados', status.UNAUTHORIZED);
         }
 
-        await CNPJ.create({ cnpj, companyType });
+        await CNPJ.create(infoCNPJ);
     },
 
     getById: async (id) => {
@@ -22,15 +23,15 @@ const CNPJService = {
 
     getAll: async () => CNPJ.findAll({}),
 
-    update: async (id, cnpj, companyType) => {
+    update: async (id, infoCNPJ) => {
         const CNPJExists = await CNPJ.findByPk(id);
         
         if (!CNPJExists) throw HttpException('Id não encontrado', status.NOT_FOUND);
         
-        const change = await CNPJ.update({ cnpj, companyType },
+        const change = await CNPJ.update(infoCNPJ,
             { where: { id } });
         
-        return change;
+            return change;
       },
 
       delete: async (id) => CNPJ.destroy({ where: { id } }),

@@ -47,8 +47,8 @@ const BuyerController = {
     delete: async (req, res, next) => {
         try {
             const { id } = req. params;
-            const user = await BuyerService.delete(Number(id));
-            return res.status(status.OK).json(user);
+            const buyer = await BuyerService.delete(Number(id));
+            return res.status(status.OK).json(buyer);
         } catch (error) {
             console.log('erro', error);
             next(error);

@@ -4,9 +4,6 @@ const status = require('../utils/StatusCode');
 const UserController = {
     create: async (req, res, next) => {
         try {
-            // const { name, email, phoneNumber,
-            //     mobile, departament, verificationCode,
-            //     emailCheked, cashForceAdm } = req.body;
             await UserService.create(req.body);
             return res.status(status.CREATED).json({ message: 'Usuário cadastrado com sucesso' });
         } catch (error) {
@@ -18,8 +15,8 @@ const UserController = {
     getById: async (req, res, next) => {
         try {
             const { id } = req.params;
-            const user = await UserService.getById(Number(id));
-            return res.status(status.OK).json(user);
+            const users = await UserService.getById(Number(id));
+            return res.status(status.OK).json(users);
         } catch (error) {
             console.log('erro', error);
             next(error);

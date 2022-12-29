@@ -106,10 +106,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             foreignKey: true,
         },
-        confirm: {
-            defaultValue: 1,
-            type: DataTypes.TINYINT,
-        },
         email: {
             defaultValue: null,
             type: DataTypes.STRING,
