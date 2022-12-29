@@ -1,0 +1,24 @@
+const { Order } = require('../database/models');
+
+const OrderService = {
+    create: async (infoOrder) => Order.create(infoOrder),
+
+    getById: async (id) => Order.findByPk(id),
+    
+    getAll: async () => Order.findAll(),
+
+    update: async (id, infoOrder) => {
+        const order = await Order.findByPk(id);
+
+        if (!order) throw HttpException('Id não encontrado', status.NOT_FOUND);
+
+        const change = await Order.update(infoOrder,
+            { where: { id } });
+
+        return change;
+    },
+
+    delete: async (id) => Order.destroy({ where: { id } }),
+};
+
+module.exports = OrderService;

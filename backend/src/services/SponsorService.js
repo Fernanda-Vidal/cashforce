@@ -6,7 +6,7 @@ const SponsorService = {
 
     getById: async (id) => Sponsor.findByPk(id),
 
-    getAll: async (id) => Sponsor.findAll(),
+    getAll: async () => Sponsor.findAll(),
 
     update: async (id, infoSponsor) => {
         const sponsor = await Sponsor.findByPk(id);

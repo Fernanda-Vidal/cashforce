@@ -80,3 +80,20 @@ params id
 
 delete: DELETE 'localhost:3001/sponsor/:id'
 params id
+
+
+ORDER -
+create: POST 'localhost:3001/order/'
+{ orderNFId, orderNumber, orderPath, orderFileName, orderOriginalName, emissionDate, pdfFile, emitedTo, nNF, CTE, value, cnpjId, userId, buyerId, providerId, orderStatusBuyer, orderStatusProvider, deliveryReceipt, cargoPackingList, deliveryCtrc }
+
+getAll: GET 'localhost:3001/order/'
+
+getById: GET 'localhost:3001/order/:id'
+params id
+
+update: PUT 'localhost:3001/order/:id'
+params id
+body { orderNFId, orderNumber, orderPath, orderFileName, orderOriginalName, emissionDate, pdfFile, emitedTo, nNF, CTE, value, cnpjId, userId, buyerId, providerId, orderStatusBuyer, orderStatusProvider, deliveryReceipt, cargoPackingList, deliveryCtrc }
+
+delete: DELETE 'localhost:3001/order/:id'
+params id
