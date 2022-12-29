@@ -1,22 +1,82 @@
 CNPJ -
-getById: 'localhost:3001/CNPJ/:id'
+create: POST 'localhost:3001/CNPJ/'
+body { cnpj, companyType }
+
+getAll: GET 'localhost:3001/CNPJ/'
+
+getById: GET 'localhost:3001/CNPJ/:id'
 params id
 
-update: 'localhost:3001/CNPJ/:id'
+update: PUT 'localhost:3001/CNPJ/:id'
 params id
 body { cnpj, companyType }
 
-delete: 'localhost:3001/CNPJ/:id'
+delete: DELETE 'localhost:3001/CNPJ/:id'
 params id
 
-create: 'localhost:3001/CNPJ/'
-body { cnpj, companyType }
-
-getAll: 'localhost:3001/CNPJ/'
 
 USER -
-
 create: 'localhost:3001/user/'
-{ name, email, phoneNumber,
-mobile, departament, verificationCode,
-emailCheked, cashForceAdm }
+body { name, email, phoneNumber,
+    mobile, departament, verificationCode,
+    emailCheked, cashForceAdm }
+
+getAll: GET 'localhost:3001/user/'
+
+getById: GET 'localhost:3001/user/:id'
+params id
+
+update: PUT 'ocalhost:3001/user/:id'
+params id
+body { name, email, phoneNumber,
+    mobile, departament, verificationCode,
+    emailCheked, cashForceAdm }
+
+
+BUYER -
+create: POST 'localhost:3001/buyer/'
+{ name, tradingName, cashForceTax, responsibleName, responsibleEmail, responsiblePosition, responsiblePhone, responsibleMobile, website, postalCode, address, number, complement, neighborhood, city, state, phoneNumber, situation, situationDate, cnpjId, confirm, email }
+
+getAll: GET 'localhost:3001/buyer/:id'
+
+getById - GET 'localhost:3001/buyer/'
+params id
+
+update - PUT 'localhost:3001/buyer/:id'
+params id
+{ name, tradingName, cashForceTax, responsibleName, responsibleEmail, responsiblePosition, responsiblePhone, responsibleMobile, website, postalCode, address, number, complement, neighborhood, city, state, phoneNumber, situation, situationDate, cnpjId, confirm, email }
+
+delete - DELETE 'localhost:3001/buyer/:id'
+
+PROVIDER -
+create: POST 'localhost:3001/provider'
+{ name, tradingName, cashForceTax, responsibleName, responsibleEmail, responsiblePosition, responsiblePhone, responsibleMobile, website, postalCode, address, number, complement, neighborhood, city, state, bank, bankAgency, account, documents, phoneNumber, situation, situationDate, cnpjId, email }
+
+getAll: GET 'localhost:3001/provider'
+
+getById: GET 'localhost:3001/provider/1'
+params id
+
+update: PUT 'localhost:3001/provider/:id'
+params id
+{ name, tradingName, cashForceTax, responsibleName, responsibleEmail, responsiblePosition, responsiblePhone, responsibleMobile, website, postalCode, address, number, complement, neighborhood, city, state, bank, bankAgency, account, documents, phoneNumber, situation, situationDate, cnpjId, email }
+
+delete: DELETE 'localhost:3001/provider/:id'
+params id
+
+
+SPONSOR - 
+create: POST 'localhost:3001/sponsor'
+{ name, tradingName, cashForceTax, responsibleName, responsibleEmail, responsiblePosition, responsiblePhone, responsibleMobile, website, postalCode, address, number, complement, neighborhood, city, state, bank, bankAgency, account, phoneNumber, situation, situationDate, cnpjId, email } 
+
+getAll: GET 'localhost:3001/sponsor'
+
+getById: GET 'localhost:3001/sponsor/:id'
+params id
+
+update: PUT 'localhost:3001/sponsor/:id'
+params id
+{ name, tradingName, cashForceTax, responsibleName, responsibleEmail, responsiblePosition, responsiblePhone, responsibleMobile, website, postalCode, address, number, complement, neighborhood, city, state, bank, bankAgency, account, documents, phoneNumber, situation, situationDate, cnpjId, email }
+
+delete: DELETE 'localhost:3001/sponsor/:id'
+params id
