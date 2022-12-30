@@ -3,7 +3,7 @@ const errorMiddleware = require('./middlewares/errorMiddleware');
 const {
     CNPJRouter, UserRouter, BuyerRouter,
     ProviderRouter, SponsorRouter,
-    OrderRouter } = require('./routes');
+    OrderRouter, OrderPortionRouter } = require('./routes');
 
 const app = express();
 
@@ -15,6 +15,7 @@ app.use('/buyer', BuyerRouter);
 app.use('/provider', ProviderRouter);
 app.use('/sponsor', SponsorRouter);
 app.use('/order', OrderRouter);
+app.use('/portion-order', OrderPortionRouter);
 
 app.use(errorMiddleware);
 

@@ -97,3 +97,20 @@ body { orderNFId, orderNumber, orderPath, orderFileName, orderOriginalName, emis
 
 delete: DELETE 'localhost:3001/order/:id'
 params id
+
+
+ORDERPORTION - 
+create: POST 'localhost:3001/orderportion/'
+body { nDup, dVenc, vDup, availableToMarket, orderId }
+
+getAll: GET 'localhost:3001/portion-order'
+
+getById: GET 'localhost:3001/portion-order/:id'
+params id
+
+update: PUT 'localhost:3001/portion-order:id'
+params id
+body { nDup, dVenc, vDup, availableToMarket, orderId }
+
+delete: DELETE 'localhost:3001/portion-order/:id'
+params id

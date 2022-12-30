@@ -4,6 +4,7 @@ const BuyerRouter = require('./Buyer');
 const ProviderRouter = require('./Provider');
 const SponsorRouter = require('./Sponsor');
 const OrderRouter = require('./Order');
+const OrderPortionRouter = require('./OrderPortion');
 
 module.exports = {
     CNPJRouter,
@@ -12,4 +13,5 @@ module.exports = {
     ProviderRouter,
     SponsorRouter,
     OrderRouter,
+    OrderPortionRouter,
 };
