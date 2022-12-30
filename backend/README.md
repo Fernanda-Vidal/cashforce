@@ -114,3 +114,15 @@ body { nDup, dVenc, vDup, availableToMarket, orderId }
 
 delete: DELETE 'localhost:3001/portion-order/:id'
 params id
+
+OFFER -
+create: POST 'localhost:3001/offer/'
+body { tax, tariff, adValorem, float, iof, expiresIn, paymentStatusSponsor, paymentStatusProvider, orderId, sponsorId }
+
+getAll: GET 'localhost:3001/offer/'
+
+getById: GET 'localhost:3001/offer/:id'
+params id
+
+delete: DELETE 'localhost:3001/offer/:id'
+params id
