@@ -1,4 +1,4 @@
-const SponsorService = require('../services/ProviderService');
+const SponsorService = require('../services/SponsorService');
 const status = require('../utils/StatusCode');
 
 const SponsorController = {
