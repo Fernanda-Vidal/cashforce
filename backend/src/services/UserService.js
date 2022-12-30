@@ -4,18 +4,7 @@ const status = require('../utils/StatusCode');
 
 
 const UserService = {
-    create: async (infoUser) => {
-        const {
-            email } = infoUser;
-        
-        const user = await User.findOne({ where: { email } });
-
-        if (user) {
-            throw HttpException('E-mail já existe no banco de dados', status.UNAUTHORIZED)
-        }
-
-        await User.create(infoUser);
-    },
+    create: async (infoUser) => User.create(infoUser),
 
     getById: async (id) => {
         const user = await User.findByPk(id);
