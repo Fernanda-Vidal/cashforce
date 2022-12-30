@@ -3,16 +3,7 @@ const HttpException = require('../utils/HttpException');
 const status = require('../utils/StatusCode');
 
 const CNPJService = {
-    create: async (infoCNPJ) => {
-        const { cnpj } = infoCNPJ;
-        const CNPJExists = await CNPJ.findOne({ where: { cnpj } });
-        
-        if (CNPJExists) {
-            throw HttpException('CNPJ já existe no banco de dados', status.UNAUTHORIZED);
-        }
-
-        await CNPJ.create(infoCNPJ);
-    },
+    create: async (infoCNPJ) => CNPJ.create(infoCNPJ),
 
     getById: async (id) => {
         const CNPJExists = await CNPJ.findByPk(id);

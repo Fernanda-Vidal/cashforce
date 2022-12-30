@@ -3,7 +3,6 @@ const status = require('../utils/StatusCode');
 
 const orderMiddleware = async (req, res, next) => {
     const { orderNFId, orderPath, orderFileName, orderOriginalName } = req.body;
-    console.log('teste');
 
     const orderNF = await Order.findOne({ where: { orderNFId } });
     if (orderNF) return res.status(status.UNAUTHORIZED).json({ message: 'OrderNFId já existe no banco de dados' });
