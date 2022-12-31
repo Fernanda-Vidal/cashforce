@@ -35,9 +35,9 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app flat height="120" width="100%" color="white">
+    <!-- <v-app-bar app flat height="120" width="100%" color="white">
       <v-divider></v-divider>
-    </v-app-bar>
+    </v-app-bar> -->
     <v-main>
       <router-view />
     </v-main>

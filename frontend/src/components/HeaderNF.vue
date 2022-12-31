@@ -1,5 +1,7 @@
 <template>
   <div class="main">
+      <v-divider></v-divider>
+
     <div class="main-nf">
       <svg
         width="24"
@@ -37,6 +39,8 @@ export default {};
 .main {
   /* border: 1px solid green; */
   margin-left: 2%;
+  margin-top: 70px;
+  border: 1px solid solid;
   width: 95%;
 }
 
@@ -49,6 +53,7 @@ h2 {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin-top: 35px;
   margin-bottom: 1%;
   width: 180px;
 }
