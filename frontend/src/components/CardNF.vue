@@ -69,6 +69,7 @@ export default {
 .item {
   color: #4d5566;
   /* border: 1px solid brown; */
+  
   width: 19%;
 }
 
