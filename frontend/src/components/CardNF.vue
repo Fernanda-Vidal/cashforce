@@ -6,12 +6,12 @@
   >
   <div class="card">
 
-  <span>{{info}}</span>
-  <span>{{info}}</span>
-  <span>{{info}}</span>
-  <span>{{info}}</span>
-  <span>{{info}}</span>
-  <span>{{info}}</span>
+  <span>{{info.nNF}}</span>
+  <span>{{info.buyerId}}</span>
+  <span>{{info.providerId}}</span>
+  <span>{{info.emissionDate}}</span>
+  <span>{{info.value}}</span>
+  <span>{{info.orderStatusBuyer}}</span>
   <button>Dados do cedente</button>
   </div>
   
@@ -21,7 +21,7 @@
 <script>
   export default {
     props: {
-        info:  String,
+        info:  [Object]
     }
   }
 </script>

@@ -23,6 +23,17 @@ const OrderController = {
         }
     },
 
+    getByUser: async (req, res, next) => {
+        try {
+            const { id } = req.params;
+            const orders = await OrderService.getByUser(Number(id));
+            return res.status(status.OK).json(orders);
+        } catch (error) {
+            console.log('erro', error);
+            next(error);
+        }
+    },
+
     getAll: async (_req, res, next) => {
         try {
             const order = await OrderService.getAll();

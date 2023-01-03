@@ -4,6 +4,7 @@ const orderMiddleware = require('../middlewares/orderMiddleware');
 
 const router = Router();
 
+router.get('/user/:id', OrderController.getByUser);
 router.get('/:id', OrderController.getById);
 router.put('/:id', OrderController.update);
 router.delete('/:id', OrderController.delete);

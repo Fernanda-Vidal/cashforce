@@ -5,6 +5,11 @@ const OrderService = {
     create: async (infoOrder) => Order.create(infoOrder),
 
     getById: async (id) => Order.findByPk(id),
+
+    getByUser: async (userId) => {
+      const orderByUser = await Order.findAll({ where: { userId } })
+      return orderByUser;
+    },
     
     getAll: async () => Order.findAll(),
 
