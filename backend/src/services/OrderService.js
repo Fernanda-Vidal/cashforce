@@ -1,4 +1,4 @@
-const { Order } = require('../database/models');
+const { Order, Buyer, Provider } = require('../database/models');
 const status = require('../utils/StatusCode');
 
 const OrderService = {
@@ -7,7 +7,15 @@ const OrderService = {
     getById: async (id) => Order.findByPk(id),
 
     getByUser: async (userId) => {
-      const orderByUser = await Order.findAll({ where: { userId } })
+      const orderByUser = await Order.findAll({
+        include: [{
+            model: Buyer,
+            attibutes: { include: 'name' }
+        }, {
+            model: Provider,
+            attibutes: { include: 'name' }
+        }], where: { userId }
+      })
       return orderByUser;
     },
     
