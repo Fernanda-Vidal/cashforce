@@ -28,7 +28,6 @@ export default {
 
 <style scoped>
 .main {
-  /* border: 1px solid green; */
   margin-left: 2%;
   margin-top: 70px;
   border: 1px solid solid;
@@ -40,7 +39,6 @@ h2 {
 }
 
 .main-nf {
-  /* border: 1px solid red; */
   align-items: center;
   display: flex;
   justify-content: space-between;

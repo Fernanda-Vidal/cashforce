@@ -68,28 +68,22 @@ export default {
 <style scoped>
 .item {
   color: #4d5566;
-  /* border: 1px solid brown; */
-  
   width: 19%;
 }
 
 .card {
   display: flex;
   justify-content: space-between;
-  /* margin-left: 55px; */
-  /* margin-right: 25px; */
   width: 100%;
 }
 
 .botao {
   color: #727d94;
   font-size: 10px;
-  /* font-weight: bold; */
   height: 10px;
 }
 
 .mx-auto {
-  /* border: 1px solid yellowgreen; */
   padding: 10px 15px 10px 15px;
   height: 40px;
   margin-bottom: 15px;
