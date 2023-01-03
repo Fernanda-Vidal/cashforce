@@ -91,6 +91,9 @@ getAll: GET 'localhost:3001/order/'
 getById: GET 'localhost:3001/order/:id'
 params id
 
+getByUser: 'localhost:3001/order/user/:id'
+params id
+
 update: PUT 'localhost:3001/order/:id'
 params id
 body { orderNFId, orderNumber, orderPath, orderFileName, orderOriginalName, emissionDate, pdfFile, emitedTo, nNF, CTE, value, cnpjId, userId, buyerId, providerId, orderStatusBuyer, orderStatusProvider, deliveryReceipt, cargoPackingList, deliveryCtrc }

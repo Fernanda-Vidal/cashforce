@@ -10,10 +10,10 @@ const OrderService = {
       const orderByUser = await Order.findAll({
         include: [{
             model: Buyer,
-            attibutes: { include: 'name' }
+            attributes: { include: 'name' }
         }, {
             model: Provider,
-            attibutes: { include: 'name' }
+            attributes: { include: 'name' }
         }], where: { userId }
       })
       return orderByUser;

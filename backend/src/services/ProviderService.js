@@ -1,13 +1,20 @@
-const { Provider } = require('../database/models');
+const { Provider, CNPJ } = require('../database/models');
 const HttpException = require('../utils/HttpException');
 const status = require('../utils/StatusCode');
 
 const ProviderService = {
     create: async (infoProvider) => Provider.create(infoProvider),
 
-    getById: async (id) => Provider.findByPk(id),
+    getById: async (id) => {
+       const provider = await Provider.findOne({
+        include: {
+            model: CNPJ,
+            attributes: { include: 'CNPJ' } }
+      }, { where: { id }});
+      return provider;
+    },
 
-    getAll: async (id) => Provider.findAll(),
+    getAll: async () => Provider.findAll(),
 
     update: async (id, infoProvider) => {
         const provider = await Provider.findByPk(id);
