@@ -28,7 +28,13 @@
 
           <v-list-item-content>
             <v-list-item-title class="item-nav"
-              >Notas fiscais</v-list-item-title
+              >
+              <a href="/" color="#0bb091">
+              <p>
+              Notas fiscais
+              </p>
+              </a>
+              </v-list-item-title
             >
           </v-list-item-content>
         </v-list-item>
@@ -48,6 +54,14 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
+
+p {
+  color: #0bb091;
+}
+
 .item-nav {
   color: #0bb091;
 }

@@ -8,7 +8,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: () => import('../views/NotasFiscais.vue')
-  },
+  }, {
+    path: '/cedente',
+    name: 'cedente',
+    component: () => import('../views/CedentesNF.vue')
+  }
 ]
 
 const router = new VueRouter({
@@ -17,4 +21,4 @@ const router = new VueRouter({
   routes
 })
 
-export default router
+export default router;

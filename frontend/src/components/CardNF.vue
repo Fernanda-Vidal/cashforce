@@ -5,30 +5,40 @@
       <div class="item">{{ info.Buyer.name }}</div>
       <div class="item">{{ info.Provider.name }}</div>
       <div class="item">{{ dataFormatada(info.emissionDate) }}</div>
-      <div class="item">{{ info.value }}</div>
-      <div class="item" v-if="Number(info.orderStatusBuyer) === 0">
-        Pendende de confirmação</div>
-      <div class="item" v-else-if="Number(info.orderStatusBuyer) === 1">
-        Pedido confirmado</div>
-      <div class="item" v-else-if="Number(info.orderStatusBuyer) === 2">
-        Não reconhece o pedido</div>
-      <div class="item" v-else-if="Number(info.orderStatusBuyer) === 3">
-        Mercadoria não recebida</div>
-      <div class="item" v-else-if="Number(info.orderStatusBuyer) === 4">
-        Recebida com avaria</div>
-      <div class="item" v-else-if="Number(info.orderStatusBuyer) === 5">
-        Devolvida</div>
-      <div class="item" v-else-if="Number(info.orderStatusBuyer) === 6">
-        Recebida com devolução parcial</div>
-      <div class="item" v-else-if="Number(info.orderStatusBuyer) === 7">
-        Recebida e confirmada</div>
-      <div class="item" v-else>Pagamento Autorizado</div>
-      <button class="item">Dados do cedente</button>
+      <div class="item cor">{{ `R$ ${info.value}` }}</div>
+      <div class="item cor" v-if="Number(info.orderStatusBuyer) === 0">
+        PENDENTE DE CONFIRMAÇÃO</div>
+      <div class="item cor" v-else-if="Number(info.orderStatusBuyer) === 1">
+        PEDIDO CONFIRMADO</div>
+      <div class="item cor" v-else-if="Number(info.orderStatusBuyer) === 2">
+        NÃO RECONHECE O PEDIDO</div>
+      <div class="item cor" v-else-if="Number(info.orderStatusBuyer) === 3">
+        MERCADORIA NÃO RECEBIDA</div>
+      <div class="item cor" v-else-if="Number(info.orderStatusBuyer) === 4">
+        RECEBIDA COM AVARIA</div>
+      <div class="item cor" v-else-if="Number(info.orderStatusBuyer) === 5">
+        DEVOLVIDA</div>
+      <div class="item cor" v-else-if="Number(info.orderStatusBuyer) === 6">
+        RECEBIDA COM DEVOLUÇÃO PARCIAL</div>
+      <div class="item cor" v-else-if="Number(info.orderStatusBuyer) === 7">
+        RECEBIDA E CONFIRMADA</div>
+      <div class="item cor" v-else>PAGAMENTO AUTORIZADO</div>
+      <v-btn
+      class="item botao"
+      rounded
+      color="white"
+      dark
+      height="25px"
+      min-width="15%"
+      @click="handleClick">
+    Dados do cedente</v-btn>
     </div>
   </v-card>
 </template>
 
 <script>
+import router from '../router/index';
+
 export default {
   props: {
       info:  [Object]
@@ -44,15 +54,18 @@ export default {
       const newDate = `0${dataF}`;
       return newDate;
   }
-
   return dataF;
-}
+},
+    handleClick () {
+      router.push({ name: 'cedente' })
+  },
   }
 }
 </script>
 
 <style scoped>
 .item {
+  color: #4d5566;
   /* border: 1px solid brown; */
   width: 19%;
 }
@@ -65,6 +78,13 @@ export default {
   width: 100%;
 }
 
+.botao {
+  color: #727d94;
+  font-size: 10px;
+  /* font-weight: bold; */
+  height: 10px;
+}
+
 .mx-auto {
   /* border: 1px solid yellowgreen; */
   padding: 10px 15px 10px 15px;
@@ -72,15 +92,27 @@ export default {
   margin-bottom: 15px;
 }
 
-@media only screen and ( max-width: 1670px ) {
-  .item {
-    font-size: 10px;
-  }
+.cor {
+  color: #00ad8c;
+  font-size: 13px;
+}
+@media only screen and ( max-width: 1400px ) {
+  .mx-auto {
+  height: 60px;
+}
 }
 
-@media only screen and ( max-width: 1200px ) {
+@media only screen and ( max-width: 1650px ) {
   .item {
-    font-size: 8px;
+    font-size: 13px;
+  }
+
+  .botao {
+    font-size: 10px;
+  }
+
+  .cor {
+    font-size: 10px;
   }
 }
 </style>

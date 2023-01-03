@@ -31,7 +31,9 @@
         <p>VALOR</p></div>
       <div class="title">
         <p>STATUS</p></div>
-      <div class="title"></div>
+      <div class="title">
+
+      </div>
     </div>
 
   </div>
@@ -89,16 +91,4 @@ p {
   margin: 10px;
   width: 19%;
 }
-
-/* @media only screen and ( max-width: 1670px ) {
-  .title {
-    width: 80%;
-  }
-}
-
-@media only screen and ( max-width: 570px ) {
-  .title {
-    width: 70%;
-  }
-} */
 </style>
