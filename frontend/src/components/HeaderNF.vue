@@ -19,13 +19,19 @@
     </div>
     <p>Visualize as notas fiscais que você tem.</p>
     <div class="header">
-      <div>NOTA FISCAL</div>
-      <div>SACADO</div>
-      <div>CEDENTE</div>
-      <div>EMISSÃO</div>
-      <div>VALOR</div>
-      <div>STATUS</div>
-      <div></div>
+      <div class="title">
+        <p>NOTA FISCAL</p></div>
+      <div class="title">
+        <p>SACADO</p></div>
+      <div class="title">
+        <p>CEDENTE</p></div>
+      <div class="title">
+        <p>EMISSÃO</p></div>
+      <div class="title">
+        <p>VALOR</p></div>
+      <div class="title">
+        <p>STATUS</p></div>
+      <div class="title"></div>
     </div>
 
   </div>
@@ -72,6 +78,27 @@ p {
   display: flex;
   font-weight: bold;
   font-size: 9px;
-  justify-content: space-around;
+  width: 100%;
+  /* justify-content: space-around; */
 }
+
+.title {
+  /* border: 1px solid yellowgreen; */
+  height: 20px;
+  font-size: 9px;
+  margin: 10px;
+  width: 19%;
+}
+
+/* @media only screen and ( max-width: 1670px ) {
+  .title {
+    width: 80%;
+  }
+}
+
+@media only screen and ( max-width: 570px ) {
+  .title {
+    width: 70%;
+  }
+} */
 </style>
