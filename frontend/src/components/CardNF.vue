@@ -30,7 +30,7 @@
       dark
       height="25px"
       min-width="15%"
-      @click="handleClick">
+      @click="handleClick(info.providerId)">
     Dados do cedente</v-btn>
     </div>
   </v-card>
@@ -53,13 +53,15 @@ export default {
         else if (dataF.length < ten) {
       const newDate = `0${dataF}`;
       return newDate;
-  }
-  return dataF;
-},
-    handleClick () {
+      }
+      return dataF;
+    },
+
+    handleClick (provider) {
+      localStorage.setItem('providerId', provider);
       router.push({ name: 'cedente' })
-  },
-  }
+    },
+}
 }
 </script>
 
