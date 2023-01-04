@@ -27,11 +27,9 @@
       class="item botao"
       rounded
       color="white"
-      dark
-      height="25px"
-      min-width="15%"
-      @click="handleClick(info.providerId)">
-    Dados do cedente</v-btn>
+      height="15px"
+      max-width="10%"
+      @click="handleClick(info.providerId)">Dados do cedente</v-btn>
     </div>
   </v-card>
 </template>
@@ -80,7 +78,7 @@ export default {
 .botao {
   color: #727d94;
   font-size: 10px;
-  height: 10px;
+  /* height: 10px; */
 }
 
 .mx-auto {
@@ -97,6 +95,10 @@ export default {
   .mx-auto {
   height: 60px;
 }
+
+  .botao {
+    font-size: 5px;
+  }
 }
 
 @media only screen and ( max-width: 1650px ) {
@@ -105,7 +107,7 @@ export default {
   }
 
   .botao {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .cor {

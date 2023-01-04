@@ -26,7 +26,8 @@ export default {
     }
   },
   mounted(){
-    axios.get(`http://localhost:3001/order/user/6`)
+    const userId = localStorage.getItem("userId")
+    axios.get(`http://localhost:3001/order/user/${userId}`)
     .then(response => {
       this.nfs = response.data;
       console.log(this.nfs)})
