@@ -29,11 +29,8 @@
           <v-list-item-content>
             <v-list-item-title class="item-nav"
               >
-              <a href="/" color="#0bb091">
-              <p>
-              Notas fiscais
-              </p>
-              </a>
+              <a href="/notas-fiscais" color="#0bb091">
+              <p>Notas fiscais</p></a>
               </v-list-item-title
             >
           </v-list-item-content>
@@ -41,14 +38,20 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-main>
+    <!-- <v-main>
       <router-view />
-    </v-main>
+    </v-main> -->
   </v-app>
 </template>
 
 <script>
-export default {}
+// import Navigationdrawer from "../../components/Navigationdrawer";
+
+export default {
+  // components: {
+  //   Navigationdrawer,
+  // }
+}
 </script>
 
 <style scoped>

@@ -4,18 +4,21 @@
     <div v-for="(nf, i) in nfs" v-bind:key="i">
         <CardNF :info="nf" />
     </div>
+    <NavBar /> 
   </div>
 </template>
 
 <script>
 import HeaderNF from "../components/HeaderNF.vue";
 import CardNF from "../components/CardNF.vue";
+import NavBar from "../components/NavBar.vue";
 import axios from "axios";
 
 export default {
   components: {
     HeaderNF,
     CardNF,
+    NavBar,
   },
   data () {
     return {
@@ -32,5 +35,3 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
