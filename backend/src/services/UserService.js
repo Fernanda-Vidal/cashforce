@@ -16,7 +16,8 @@ const UserService = {
 
     getByEmail: async (email) => {
         const user = await User.findOne({ where: { email } });
-        
+
+        if (!user) throw HttpException('E-mail não encontrado', status.NOT_FOUND);
         return user;
     },
 

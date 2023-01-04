@@ -4,7 +4,7 @@ const userMiddleware = require('../middlewares/userMiddleware');
 
 const router = Router();
 
-router.get('/email', UserController.getByEmail);
+router.post('/login', UserController.getByEmail);
 router.get('/:id', UserController.getById);
 router.put('/:id', UserController.update);
 router.delete('/:id', UserController.delete);
