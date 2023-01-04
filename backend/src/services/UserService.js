@@ -14,6 +14,12 @@ const UserService = {
 
     },
 
+    getByEmail: async (email) => {
+        const user = await User.findOne({ where: { email } });
+        
+        return user;
+    },
+
     getAll: async () => User.findAll({}),
 
     update: async (id, infoUser) => {

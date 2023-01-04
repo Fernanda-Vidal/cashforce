@@ -21,7 +21,17 @@ const UserController = {
             console.log('erro', error);
             next(error);
         }
+    },
 
+    getByEmail: async (req, res, next) => {
+        try {
+            const { email } = req.body;
+            const user = await UserService.getByEmail(email);
+            return res.status(status.OK).json(user);
+        } catch (error) {
+            console.log('erro', error);
+            next(error);
+        }
     },
 
     getAll: async (_req, res, next) => {
