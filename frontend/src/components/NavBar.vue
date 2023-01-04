@@ -4,7 +4,9 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
+          <a href="/">
             <img src="/logo-cashforce.png" alt="Logo Cashforce" />
+          </a>
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
