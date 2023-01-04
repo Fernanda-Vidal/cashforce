@@ -95,7 +95,7 @@ Enviar no corpo da requisição um objeto no seguinte formato contendo:
 - para deletar o CNPJ: DELETE 'localhost:3001/CNPJ/:id'
 </div>
 
-## Endpoints de CNPJ
+## Endpoints de Order
 <div align="justify">
 
 - para cadastrar um novo CNPJ: POST 'localhost:3001/order/'
